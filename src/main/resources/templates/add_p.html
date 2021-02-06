@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form th:action="@{save_p}" method="get" th:object="${product}">
+<input type="text"  th:field="*{id}" readonly>
+<input type="text"  th:field="*{nomP}">
+<input type="text"  th:field="*{Desce}">
+<input type="text"  th:field="*{prix}">
+<input type="text"  th:field="*{img}">
+<input type="submit" value="">
+
+</form>
+
+</body>
+</html>

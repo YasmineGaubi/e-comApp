@@ -1,0 +1,44 @@
+	<div th:replace="PageAcceuil :: PageAcceuil"></div>
+
+<style>
+.card{
+height:200px;
+width:200px;
+background-color:blue;
+}
+</style>
+
+<body>
+
+
+ <div class="container">
+
+     	<div class="row">
+     	
+     	<div  th:if="${session.user.admin}">  <a href="/produit/add_prod"> <div class="card"></div> </a> </div>
+     	
+	        	<div th:each="a:${list_prod}" class="col-md-4">
+	        		<div class="text-center">
+	        			<h6 th:text="${a.nomP}" class="text-center"></h6>
+	        			<img th:src="${a.img}" width="200px" height="200px">
+	        			<p th:text="${a.Desce}"> 
+	        			<h5 th:text="${'Price : ' + {a.prix}} + ' TND'"> </h5><br>
+	        			<div class="row">
+	        				<div class="col-md-4"></div>
+	        				<div class="col-md-4">
+	        					<a  th:if="${!session.user.admin}" th:href="@{add_com(id_prod=${a.id})}" class="btn btn-primary form-control sign">Add to card</a>
+	        					<a  th:if="${session.user.admin}" th:href="@{modify(id_prod=${a.id})}" class="btn btn-primary form-control sign">Modify</a>
+	        					<!--  (y=${y},email=${client.email})-->
+	        				</div>
+	        				<div class="col-md-4"></div>
+	        			</div>
+	        			<hr>
+	        		</div>
+	       		</div>
+     	</div>
+     </div>
+
+     
+<div th:replace="footer :: footer"></div>
+</body>
+	
