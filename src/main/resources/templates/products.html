@@ -1,43 +1,58 @@
-	<div th:replace="PageAcceuil :: PageAcceuil"></div>
+<div th:replace="Header :: Header"></div>
 
 <style>
 .card{
-height:200px;
-width:200px;
-background-color:blue;
+height: 50px;
+    width: 50px;
+    background-image: url(https://img.icons8.com/cotton/2x/add--v2.png);
+    background-size: 50px 50px;
 }
+
 </style>
 
 <body>
 
 
  <div class="container">
-
-     	<div class="row">
+ <div th:if="${session.yee == false}">
+       		<h3 class="Nexa-bold alert alert-danger" style="text-align: center"  th:text="${session.esm} +' is '+' '+ ${session.msg}"></h3>
+    </div>
+      	<div  th:if="${session.user.admin}">  <a style="text-decoration:none" href="/produit/add_prod">Add Product <div class="card"></div> </a> </div>
+ 
+     	<div class="row" style="    justify-content: center;    justify-content: center;
+    display: grid !important;
+    grid-template-columns: auto auto auto;
+     	">
+ 
      	
-     	<div  th:if="${session.user.admin}">  <a href="/produit/add_prod"> <div class="card"></div> </a> </div>
-     	
-	        	<div th:each="a:${list_prod}" class="col-md-4">
-	        		<div class="text-center">
-	        			<h6 th:text="${a.nomP}" class="text-center"></h6>
-	        			<img th:src="${a.img}" width="200px" height="200px">
-	        			<p th:text="${a.Desce}"> 
-	        			<h5 th:text="${'Price : ' + {a.prix}} + ' TND'"> </h5><br>
-	        			<div class="row">
-	        				<div class="col-md-4"></div>
-	        				<div class="col-md-4">
-	        					<a  th:if="${!session.user.admin}" th:href="@{add_com(id_prod=${a.id})}" class="btn btn-primary form-control sign">Add to card</a>
-	        					<a  th:if="${session.user.admin}" th:href="@{modify(id_prod=${a.id})}" class="btn btn-primary form-control sign">Modify</a>
-	        					<!--  (y=${y},email=${client.email})-->
-	        				</div>
-	        				<div class="col-md-4"></div>
+	        	<div th:each="p:${list_prod}" class="col-md-5">
+	        	
+	        		<div class="textt-center">
+	        		
+	        			<h6 th:text="${p.nomP}" class="text-center"></h6>
+	        			<img th:src="${p.img}" width="300px" height="300px">
+	        			<p th:text="${p.Desce}"></p>
+	        			<div>	        		
+	        			<h6 style="color:#ffb6c1">Quantity in Stock:</h6><h6 th:text="${p.qte}"></h6>
 	        			</div>
-	        			<hr>
+	        		
+	        			<h5 th:text="${'Prix: ' + {p.prix}} + ' DT'"> </h5>
+	        			
+	        			<div class="row">
+	        				<div class="col-md-4">
+	        			 <a  th:if="${!session.user.admin}" th:href="@{add_com(id_prod=${p.id})}" class="btn btn-light">+</a>	
+	        					
+	        			 <a  th:if="${session.user.admin}" th:href="@{modify(id_prod=${p.id})}" class="btn btn-light">Modify</a>
+	        				</div>
+	        		
 	        		</div>
+	       		
 	       		</div>
+	       	</div>
+
      	</div>
      </div>
-
+     
      
 <div th:replace="footer :: footer"></div>
 </body>

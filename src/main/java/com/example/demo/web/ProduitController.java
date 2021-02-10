@@ -67,7 +67,16 @@ public class ProduitController {
 		Client c = (Client) session.getAttribute("user");
 		Commande m = new Commande(c,p);
 		co.save(m);
-		return "redirect:lister";
+		return "card_add";
 	}
+	
+	@RequestMapping("/mycard")
+	public String afficher_mycard(Model model) {
+		List<Commande> prod = co.findAll();
+		model.addAttribute("prod_com",prod);
+		return "mycards";
+	}
+	
+	
 	
 }

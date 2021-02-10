@@ -1,24 +1,57 @@
-
-<div th:replace="PageAcceuil :: PageAcceuil"></div>
-
-<div class="container" style="margin: 6% auto ; padding: 30px 190px;">
-    <div class="login-header">
-        <h1>Login</h1>
- </div>
+<div style="    height: 100vh;
+    display: flex;
+    flex-direction: column;">
 
 
-<form  th:action="@{veriflogin}" method="get" th:object="${client}" >
+<div th:replace="Header :: Header"></div>
+
+
+
+<div class="container" style="flex:1;margin: 6% auto ; padding: 30px 190px;display: grid;
+    place-items: center;">
+<div style="border: 5px solid white;
+    border-radius: 15px;
+    padding: 15px;
+    width: 33vw;">
+     <h1 class="sans-serif" style='text-align :center;margin-bottom:30px'>Login </h1>
+
+
+
+   <form  th:action="@{veriflogin}" method="get" th:object="${client}" >
+
 			<div th:if="${y==false}">
-       		<h3 class="Nexa-bold alert alert-danger" style="text-align: center" th:text="${msg}"></h3>
-    </div>
+			
+       		<h3 class="sans-serif alert alert-primary" style="text-align: center" th:text="${msg}"></h3>
+            </div>
+ 
 			<input placeholder="Email" type="email" th:field="*{email}" class="form-control" id="email"
             style="width: 180px;margin: 30px auto;">
+            
         <input placeholder="Password" type="password" th:field="*{m2p}" class="form-control" id="password"
             style="width: 180px;margin: 30px auto;">
-		<center><input type="submit" value="ok bb"></center>	
-		
-		<a href="/client/add">Register</a>
+            
+		<center><input type="submit" value="Log In" class="form-control"
+		         style="width: 120px;margin: 20px auto;background-color: #ffb6c1;">
+		</center>	
+	
+	    <div class="form-group">
+ 
+          		<center>
+          		  <a href="/client/add" class="form-control"
+          		 style="width: 120px;margin: 20px auto;background-color: #ffb6c1;">
+          		 Register
+          		  </a>
+          		</center>
+        </div>
+        
 
 </form>
+</div>
+    
+
+
  </div>
+
+ 
 <div th:replace="footer :: footer"></div>
+</div>

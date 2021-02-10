@@ -1,44 +1,46 @@
-@font-face {
-	font-family: MORVA;
-	src: url('../fonts/morva/MORVA.ttf');
-}
 
-@font-face {
-	font-family: Nexa-Bold;
-	src: url('../fonts/nexa/Nexa Bold.otf');
-}
-
-@font-face {
-	font-family: Nexa-Light;
-	src: url('../fonts/nexa/Nexa Light.otf');
-}
 
 .nav-link {
-	font-family: Nexa-Light;
+	font-family: sans-serif;
 }
 
 
 
 .Morva {
-	font-family: MORVA;
+	font-family:sans-serif;
 }
 
 .Nexa-Light {
-	font-family: Nexa-Light;
+	font-family: sans-serif;
 }
 
 .Nexa-Bold {
-	font-family: Nexa-Bold;
+	font-family: sans-serif;
 }
-
+.text-center {
+	    width: fit-content !important;
+	
+}
+ img {
+	border-radius: 50%;
+    border: 3px solid;
+}
+.textt-center{
+		      width: fit-content !important;
+    border: 2px solid;
+    border-radius: 20px;
+    height: 80vh;
+    margin: 15px;
+    padding: 20px;
+}
 .logo {
-	font-size: 5vw;
+	font-size: 2vw;
 	color: white;
 }
 
 .navbar-brand,
 .nav-link {
-	color: white !important;
+	color: black !important;
 }
 
 nav>button {
@@ -57,7 +59,7 @@ nav>button {
 }
 
 .dropdown-menu {
-	background-color: #0e0e0e !important;
+	background-color: 	#888888 !important;
 }
 
 .dropdown-item {
@@ -65,7 +67,7 @@ nav>button {
 }
 
 .dropdown-item:hover {
-	background-color: #5d5d5d8c;
+	background-color:#ffb6c1;
 }
 
 .social-nav {
@@ -76,29 +78,9 @@ nav>button {
 	display: inline-block;
 }
 
-.about-us {
-	margin-top: 6rem;
-	margin-left: 7rem;
-	border-bottom: 1px solid black;
-}
-
-.about-us>div>p {
-	padding: 0 0 0 10px;
-	border-left: 2px solid black;
-	font-size: calc(.5rem + 1.2vw);
-}
-
-.about-us>div>h2 {
-	margin-left: 100px;
-}
-
-.about-us-text {
-	margin-top: 0;
-}
-
 
 .bg-light {
-	background-color: black !important;
+	background-color: white !important;
 }
 
 .overlay {
@@ -109,7 +91,7 @@ nav>button {
 	margin-left: 100px;
 	padding: 50px;
 	font-size: 40px;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid 	#888888;
 	text-align: center;
 }
 
@@ -123,10 +105,10 @@ nav>button {
 }
 
 .footer {
-	background-color: black;
+	background-color: white;
 }
 
-.footer>div>div>div>h1 {
+.footer>div>div>div>p {
 	font-size: 15vw;
 	color: #0e0e0e !important;
 
@@ -145,6 +127,7 @@ nav>button {
 
 .footer>div>div>.col {
 	text-align: center;
+	display:contents
 }
 
 .footer>div>div>div>p {
@@ -154,13 +137,13 @@ nav>button {
 input {
 	padding: 10px 20px 10px 20px;
 	color: #444444;
-	font-family: Nexa-Light;
+	font-family: san-serif;
 }
 
 
 .archive-date {
 	margin: 5% 0;
-	font-family: Nexa-Light;
+	font-family: san-serif;
 	font-size: 18px;
 }
 
@@ -188,13 +171,13 @@ input {
 .form-control:focus,
 .form-control:hover {
 	outline: none;
-	border-color: inherit;
+	border-color: #ffb6c1;
 	box-shadow: none;
 }
 
 .form-control {
 	border: none;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #888888;
 	border-radius: 1px;
 	padding: 5px;
 	margin: -10px 0px 30px 10px;
@@ -203,9 +186,9 @@ input {
 	width: 20%;
     margin: 0 auto;
     border: none;
-    font-family: Nexa-Ligth;
+    font-family: san-serif;
     padding: 0;
-    background-color: #080513d9;
+    background-color: #ffb6c1;
 	border-radius: 5px;	
 	color: white;
 }
@@ -215,23 +198,23 @@ input {
     margin-top: -15px;
     margin-bottom: 15px;
     font-size: 12px;
-    color: #ad1106;
+    color: #ffb6c1;
 }
 
 .login-header>h1{
 	text-align: center;
-	font-family: Nexa-Bold;
+	font-family: san-serif;
 }
 
 .login-header>a{
 	color:gray;
 	text-align: center;
-	font-family: Nexa-Light;
+	font-family: san-serif;
 }
 .login-header>a:hover{
-	color:#4f2ae2;
+	color:#ffb6c1;
 	text-align: center;
-	font-family: Nexa-Light;
+	font-family: san-serif;
 }
 .login-btn{
 	width: calc(15vw - 20px) !important;

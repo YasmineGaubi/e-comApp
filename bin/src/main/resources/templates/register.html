@@ -1,0 +1,44 @@
+<!--  HEADER  -->
+	<div th:replace="PageAcceuil :: PageAcceuil"></div>
+
+<div class="container" style="padding: 30px 190px;">
+    <form action="save" method="POST" th:object="${client}">
+        <h1 class="Nexa-Bold" style='text-align :center;margin-bottom:30px'>Join the community now </h1>
+        <div class="row">
+            <div class="col-md-6" style="border-right: 1px solid #00000030;padding: 30px;">
+                <div class="form-group">
+                	<br><br><br>
+                    <label for="firstname"> First Name : </label>
+                    <input type="text" th:field="*{nom}" id="firstname" class="form-control">
+
+                    <label for="lastname"> Last Name : </label>
+                    <input type="text" th:field="*{prenom}" id="lastname" class="form-control">
+
+					<label for="country"> Email </label>
+                	<input th:field="*{email}" id="country" class="form-control" />
+                	
+                </div>
+            </div>
+            <div class="col-md-6">
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <label for="password"> Password : </label>
+                <input type="password" id='password1' th:field="${client.m2p}" class="form-control">
+                
+         
+            </div>
+        </div>
+        <div class="form-group">
+            <br><br>
+            <input type="submit" name="register" class="form-control sign" Value="Register">
+        </div>
+    </form>
+</div>
+
+<!--  VALIDATION  -->
+	
+<!--  FOOTER  -->
+	<div th:replace="footer :: footer"></div>

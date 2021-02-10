@@ -1,20 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
+<!--  HEADER  -->
+	<div th:replace="Header :: Header"></div>
+	
+	<center>
+<div class="container" style="padding: 100px 200px;">
 
-<form th:action="@{save_p}" method="get" th:object="${product}">
-<input type="text"  th:field="*{id}" readonly>
-<input type="text"  th:field="*{nomP}">
-<input type="text"  th:field="*{Desce}">
-<input type="text"  th:field="*{prix}">
-<input type="text"  th:field="*{img}">
-<input type="submit" value="">
+ <form th:action="@{save_p}" method="get" th:object="${product}">
+       
+        <div class="row" style="    justify-content: center;
+        ">
+           <div class="col-md-8">
+            <div class="form-group">
+              
+               <input type="text" th:field="*{id}" class="form-control" />
+               <input placeholder="Name Product" type="text" th:field="*{nomP}" class="form-control"/>
+               <input placeholder="Description" type="text" th:field="*{Desce}" class="form-control"/>
+               <input placeholder="Price" type="text" th:field="*{prix}" class="form-control"/>
+               <input placeholder="Image URL" type="text" th:field="*{img}" class="form-control"/>
+               
+               <input type="submit" value="Submit" class="form-control sign"/>
+         </div>
+      </div>
+     </div>
+ </form>   
 
-</form>
+   </div>
+   </center>
 
-</body>
-</html>
+	<br>
+
+	
+<!--  FOOTER  -->
+	<div th:replace="footer :: footer"></div>

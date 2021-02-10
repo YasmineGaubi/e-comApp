@@ -17,9 +17,4 @@ public class Afterlogin {
 		return "PageAcceuil";
 	}
 	
-	@RequestMapping("/hifi")
-	public String hifi(){
-		
-		return "hifi";
-	}
 }

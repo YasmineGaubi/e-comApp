@@ -20,20 +20,23 @@ public class EComApplication {
 		Client clt = new Client ((long)4,"yass","yass","yass@yass.com","yass") ;
 		clt.setAdmin(true);
 		cd.save(clt); 
+		Client user = new Client ((long)5,"user","user","user@user.com","user") ;
+		user.setAdmin(false);
+		cd.save(user); 
 	
 	
 	ProduitDAO ad = ctx.getBean(ProduitDAO.class) ; 
-	Produit p1 = new Produit ("Chaîne HiFi Essentielb MS4001BT Bluetooth",500f,"Micro chaine GRUNDIG M","https://cdn.pixabay.com/photo/2019/04/18/11/38/radio-4136732_960_720.png") ; 
-	Produit p2 = new Produit ("Chaîne HiFi Essentielb MS4001BT Bluetooth",(float)700,"Micro chaine GRU ReflexTélécommande.","hifi2.png") ; 
-	Produit p3 = new Produit ("Chaîne HiFi Essentielb MS4001BT Bluetooth",(float)560,"Micro chaine GRUNDIG MS240.Lecteur CD compatible MP3/WMASimple cassette enregistreur (enregistre la radio, le CD, les ports USB ou SD )Enregistrement synchronisé CD/K7Tuner Digital Prme et SleepMi","jaune.png") ; 
-	Produit p4 = new Produit ("Chaîne HiFi Essentielb MS4001BT Bluetooth",(float)870,"Micro chaine GRUNDIG MS240.Lecteur CD compatible MP3/WMASimple cassette enregistreur (enregistre la radio, le CD, les ports USB ou SD )Enregistrement synchronisé CD/onctions Horloge, Alarme et Sl","sony.png") ; 
-	Produit p5 = new Produit ("Chaîne HiFi Essentielb MS4001BT Bluetooth",(float)140,"Micro chaine GRUNDIG MS240.Lecteur CD compatible MP3/WMASimple cassette enregistreur (enregistre la radio, le CD, les ports USB ou SD )Enregtal PLL FM RDS 30 mémoiresPort USB + slot SD : Lecture MP3Fonctions","khorda.png") ; 
-	Produit p6 = new Produit ("STAR ONE Four Electrique",(float)600,"STAR ONE Four Electrique - 36 Litres - Silver - Garantie 1 an\\n\" + \"Marque: STAR ONE | Produits similaires par STAR ONE","robot.jpg") ;
-	Produit p7 = new Produit ("STAR ONE Four Electrique",(float)3600,"STAR ONE Four Electrique - 36 Litres - Silver - Garantie 1 an\\n\" + \"Marque: STAR ONE | Produits similaires par STAR ONE","ma3oun1.jpg") ; 
-	Produit p8 = new Produit ("STAR ONE Four Electrique",(float)6030,"STAR ONE Four Electrique - 36 Litres - Silver - Garantie 1 an\\n\" + \"Marque: STAR ONE | Produits similaires par STAR ONE","four1.jpg") ;
-	Produit p9 = new Produit ("STAR ONE Four Electrique",(float)780,"STAR ONE Four Electrique - 36 Litres - Silver - Garantie 1 an\\n\" + \"Marque: STAR ONE | Produits similaires par STAR ONE","four2.jpg") ; 
-	Produit p10 = new Produit ("STAR ONE Four Electrique",(float)300,"STAR ONE Four Electrique - 36 Litres - Silver - Garantie 1 an\\n\" + \"Marque: STAR ONE | Produits similaires par STAR ONE","fridge1.jpg") ; 
-	Produit p11 = new Produit ("STAR ONE Four Electrique",(float)600,"STAR ONE Four Electrique - 36 Litres - Silver - Garantie 1 an\\n\" + \"Marque: STAR ONE | Produits similaires par STAR ONE","fridge2.jpg") ; 
+	Produit p1 = new Produit ("CAMBRIDGE AUDIO CXA61 AMPLI STEREO / LUNAR GRAY",500f,"Lorem ipsum dolor sit amet. ","https://cdn.pixabay.com/photo/2019/04/18/11/38/radio-4136732_960_720.png",4) ; 
+	Produit p2 = new Produit ("TRIANGLE ZERIUS 902 NOIR ENCEINTES COLONNES LA PAIRE",(float)700," Quisque vel orci mauris. Curabitur mauris lorem","https://img2.pngio.com/chaine-hifi-png-3-png-image-hi-fi-png-494_435.png",10) ; 
+	Produit p3 = new Produit ("COMETE 902 COGNAC ENCEINTE BIBLIOTHEQUE LA PAIRE",(float)560," Accumsan aliquet metus nec.","https://zococity.es/media/catalog/product/cache/78d54c8adfc867ddad4b37fa06bea7e6/1/_/1_12.jpg",50) ; 
+	Produit p4 = new Produit ("Elipson plant m5.0 noir laque pack d'enceintes compactes",(float)870,"Sollicitudin interdum diam. Integer non auctor ligula.","https://res.cloudinary.com/chal-tec/image/upload/w_450,q_auto,f_auto/bbg/10004797/Gallery/10004797_yy_0001_titel___auna_DS_2_Stereoanlage_MP_Aufnahme_reedit.jpg",4) ; 
+	Produit p5 = new Produit ("Triangle concerto blanc laqué enceintes colonnes la paire",(float)140,",Nunc mauris massa, gravida non egestas id, auctor a est.","https://img2.cgtrader.com/items/126992/c0f302d666/yamaha-audio-3d-model-obj-lxo-lxl.jpg",2) ; 
+	Produit p6 = new Produit ("Micro ondes THOMSON EASY20BLACK MIROIR",(float)600," Ut rutrum enim sed semper lacinia. Nunc egestas urna sit amet massa tempus, a pellentesque risus pretium.","https://us.123rf.com/450wm/pioneer111/pioneer1111801/pioneer111180100105/94153395-four-micro-ondes-ouvert-isol%C3%A9-sur-un-fond-blanc.jpg?ver=6",12) ;
+	Produit p7 = new Produit ("Micro ondes MOULINEX MO20MSBL",(float)3600,"onec eu magna non ipsum fringilla venenatis non rutrum tellus. Maecenas et interdum dui. Proin quis tempor turpis.","https://www.cdiscount.com/pdt2/0/w/6/1/700x700/oceamo20w6/rw/oceanic-amo20w6-micro-ondes-20l-blanc.jpg",4) ; 
+	Produit p8 = new Produit ("Refrigerateur Samsung",(float)6030,"Nullam sit amet turpis porttitor, iaculis ex eu, faucibus mi. Pellentesque tincidunt ullamcorper ante sed molestie.","https://www.mega.tn/assets/uploads/img/pr_froid/1559259671_340.jpg",2) ;
+	Produit p9 = new Produit ("Four Electrique",(float)780,"Cras molestie ipsum nec massa gravida pellentesque","https://static.mytek.tn/img/p/7/0/5/4/3/70543-large_default.jpg",1) ; 
+	Produit p10 = new Produit ("Robot Batteur Electrique",(float)300,"Nam ullamcorper lobortis erat, eget fringilla erat molestie sit amet.","https://www.cdiscount.com/pdt2/4/8/2/1/1200x1200/auc5019705922482/rw/robot-patissier-aicok-robot-de-cuisine-avec-croch.jpg,",3) ; 
+	Produit p11 = new Produit ("Robot Patissier Miago",(float)600,"Phasellus pellentesque mi vel pulvinar pulvinar.Interdum et malesuada fames ac ante ipsum primis in faucibus. ","https://www.cdiscount.com/pdt2/5/0/1/4/550x550/mio3665540399501/rw/robot-patissier-miogo-mrpm1-robot-de-cuisine-c.jpg",20) ; 
 	ad.save(p1) ;
 	ad.save(p2) ;
 	ad.save(p3) ;

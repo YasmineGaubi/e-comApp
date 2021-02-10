@@ -1,0 +1,35 @@
+
+<div th:replace="Header :: Header"></div>
+	
+	<div class="container">
+	    <table class="table">
+	      <thead class="thead-dark">
+	        <tr>
+	         <th scope="col">Name Product</th>
+	         <th scope="col">Date</th>
+	         <th scope="col">Price Product</th>
+	         <th scope="col">Name client</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	       <tr th:each="p:${prod_com}">
+	         <td th:text="${p.pro.nomP}"></td>
+	         <td th:text="${p.date}" ></td>
+	         <td th:text="${p.pro.prix}"></td>
+	         <td th:text="${p.cli.nom}"></td>
+	        
+	        </tr>
+	    
+	    </tbody>
+	    </table>
+	</div>
+	
+	<center>Total : <div  th:text="${#aggregates.sum(prod_com.![pro.prix])}"></div></center>
+	<br>
+		<center> <button type="button" class="btn btn-light"><a th:href="@{/confirmation}">Buy Now !</a></button>	 </center>
+	
+	
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	
+	</body>
+<div th:replace="footer :: footer"></div>

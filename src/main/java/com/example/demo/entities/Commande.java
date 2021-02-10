@@ -6,6 +6,7 @@ import javax.persistence.Id;
 import java.util.Date;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Commande {
@@ -14,7 +15,13 @@ public class Commande {
 	private Long id;
 	private Date date;
 	
+	@ManyToOne
+	@JoinColumn(name="id_c")
+	private Client cli;
 	
+	@ManyToOne
+	@JoinColumn(name="id_p")
+	private Produit pro;
 	
 	public Commande() {
 		super();
@@ -59,15 +66,5 @@ public class Commande {
 	public void setPro(Produit pro) {
 		this.pro = pro;
 	}
-
-	@ManyToOne
-	@JoinColumn(name="id_c")
-	private Client cli;
-	
-	@ManyToOne
-	@JoinColumn(name="id_p")
-	private Produit pro;
-	
-	
 	
 }

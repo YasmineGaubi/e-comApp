@@ -1,0 +1,46 @@
+
+<div th:replace="Header :: Header"></div>
+	
+	<body>
+	
+	<style>
+	.icon{
+     height: 40px;
+    width: 40px;
+    }
+    .icon2{
+     height: 80px;
+    width: 80px;
+    }
+
+	</style>
+	
+
+	<div class="row justify-content-center">
+    <div class="col-auto">
+    <div class="alert alert-danger" role="alert" style="margin:30px">
+  Your product has been added successfully!
+</div>
+      <table class="table table-responsive">
+  <thead>
+    <tr>
+      <th style="padding:30px" scope="col">Check your card here.</th>
+      <th style="padding:30px" scope="col">Add more products.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:50px"><a th:href="@{mycard}"> <img class="icon" src="/image/shop.png" ></a></td>
+      <td style="padding:54px"><a th:href="@{lister}"> <img class="icon" src="/image/addd.png" ></a></td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  </div>
+	
+	
+
+	<br><br><br><br><br><br><br><br><br><br>
+	</body>
+	
+<div th:replace="footer :: footer"></div>

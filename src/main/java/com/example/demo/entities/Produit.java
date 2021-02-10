@@ -24,6 +24,7 @@ public class Produit implements Serializable{
 	private String Desce;
 	private String img;
 	private float prix;	
+	private int qte;
 	
 	@OneToMany(mappedBy = "pro")
 	Set<Commande> list_c = new HashSet<Commande>();
@@ -32,14 +33,16 @@ public class Produit implements Serializable{
 		super();
 	}
 	
-	public Produit(String nomP,float prix,String desce,  String img) {
+	public Produit(String nomP,float prix,String desce,  String img, int qte) {
 		super();
 		
 		this.nomP = nomP;
 		this.Desce = desce;
 		this.prix = prix;
 		this.img = img;
+		this.qte= qte;
 	}
+	
 	public Long getId() {
 		return id;
 	}
@@ -70,7 +73,11 @@ public class Produit implements Serializable{
 	public void setImg(String img) {
 		this.img = img;
 	}
-	
-	
-	
+	public int getQte() {
+		return qte;
+	}
+	public void setQte(int qte) {
+		this.qte = qte;
+	}		
 }
+

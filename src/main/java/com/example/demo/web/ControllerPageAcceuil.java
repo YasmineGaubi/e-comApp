@@ -13,13 +13,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.dao.ClietnDAO;
+import com.example.demo.dao.CommandeDAO;
 import com.example.demo.entities.Client;
+import com.example.demo.entities.Commande;
 
 @Controller
 @RequestMapping("/ecom")
 public class ControllerPageAcceuil {
 	@Autowired
 	ClietnDAO cd;
+	
+	@Autowired
+	CommandeDAO cm;
 	
 	
 	@RequestMapping ( value = "/login" , method = RequestMethod.GET )
@@ -30,8 +35,6 @@ public class ControllerPageAcceuil {
 		return "login" ;
 	
 	}
-	
-	
 	
 	
 	@RequestMapping("/veriflogin")
@@ -47,18 +50,22 @@ public class ControllerPageAcceuil {
 				return "PageAcceuil";
 			}
 			m.addAttribute("y",false);
-			m.addAttribute("msg","Client does not exist");
+			m.addAttribute("msg","Client doesn't exist! Please register.");
 			return "login";			
 			//houny bch yzid yeshri
 		//System.out.println(c.getEmail()+c.getM2p());
-}
+    }
+	
 	@RequestMapping("/logout")
 	public String logout(HttpServletRequest request) {
 		HttpSession session = request.getSession(false);
+		List<Commande> c = cm.findAll();
 		session.setAttribute("y", false);;
-		session.invalidate();
+		session.invalidate();	
+		cm.deleteAll();
 		return "redirect:login";
 	}
+	
 	
 }
 
